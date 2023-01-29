@@ -1,0 +1,41 @@
+# CUDA_VISIBLE_DEVICES=0,1 python create_heatmaps.py --config config_template.yaml
+--- 
+
+segment_and_patch_arguments:
+  # arguments for segment_and_patch
+  step_size: 256
+  patch_size: 256
+  patch_level: 0
+  custom_downsample: 1
+
+
+# color_normaliztion_arguments:
+#   # arguments for color normaliztion
+
+  
+
+extract_feature_arguments:
+  # arguments for extract feature
+  batch_size: 256
+  slide_ext: .svs
+  target_patch_size: 1
+
+
+data_arguments: 
+  # where is data stored; can be a single str path or a dictionary of key, data_dir mapping
+  data_dir: heatmaps/demo/slides/
+  # column name for key in data_dir (if a dict mapping is used)
+  data_dir_key: source
+  # csv list containing slide_ids (can additionally have seg/patch paramters, class labels, etc.)
+  # process_list: heatmap_demo_dataset.csv
+  # preset file for segmentation/patching
+  # preset: presets/bwh_biopsy.csv
+  # file extention for slides
+  slide_ext: .svs
+  # label dictionary for str: interger mapping (optional)
+  label_dict:
+    LUAD: 0
+    LSCC: 1                        
+
+
+

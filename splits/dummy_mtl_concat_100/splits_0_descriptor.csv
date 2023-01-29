@@ -1,0 +1,9 @@
+,train,val,test
+Lung,2026,45,91
+Skin,360,9,19
+Kidney,669,22,44
+Uterus Endometrium,303,10,21
+Pancreas,423,15,31
+Soft Tissue,269,8,17
+Head Neck,743,24,49
+Brain,395,17,35
