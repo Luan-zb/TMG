@@ -2,11 +2,6 @@
 Cancers of unknown primary (CUPs) are metastatic tumours whose primary site cannot be determined; that is, when malignant cells are discovered in the body, but the primary site of the tumour cannot be determined. Identifying the origin of a tumour is the premise and prerequisite for effective treatment in the current cancer diagnostic and treatment systems, which considerably increases the difficulty of diagnosing and treating patients with CUPs whose primary site cannot be found. The traditional methods used to identify the origin of a tumour often include clinical, radiological, and endoscopic examinations. However, these detection methods are not satisfactorily accurate, sensitive, and specific, and do not provide a diagnostic gold standard. To overcome these challenges, we present a Transformer-based algorithm (TN-MIL-GAP) that can predict the origin of primary tumours. We used whole-slide images of tumours with known primary origins to train a model that could identify the origin sites of the primary tumour. In our dependent test set with known primary origins, the model achieved an AUC of 99.66% and a top-1 accuracy of 94.8%, which is a great improvement compared to other state-of-the-art methods, such as AttentionMIL, TOAD, and MIL.
 ## Data
 The pathology slides and corresponding labels for WSIs are available from the TCIA CPTAC Pathology Portal（https://cancerimagingarchive.net/datascope/cptac/）.
-
-- All images are 224x224 pixels (px) at 0.5 microns per pixel (MPP). 
-- All images are color-normalized using Macenko's method (http://ieeexplore.ieee.org/abstract/document/5193250/, DOI 10.1109/ISBI.2009.5193250).
-- Tissue classes are: **Adipose (ADI), background (BACK), debris (DEB), lymphocytes (LYM), mucus (MUC), smooth muscle (MUS), normal colon mucosa (NORM), cancer-associated stroma (STR), colorectal adenocarcinoma epithelium (TUM).**
-
 Various types of data are as follows:
 
 Types|Quantity
@@ -42,10 +37,10 @@ Brain|447
 - pyyaml (3.13)
 
 ## Training
-python main_mtl_concat_all_type_transformer.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mtl_sex  --task dummy_mtl_concat  --log_data  --results_dir result_TransMIL_test38 --data_root_dir DATA_ROOT_DIR
+python train.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mtl_sex  --task dummy_mtl_concat  --log_data  --results_dir result_TransMIL_test38 --data_root_dir DATA_ROOT_DIR
 
 ## Evaluation
-python eval_mtl_concat_all_type_transformer.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir DATA_ROOT_DIR
+python eval.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir DATA_ROOT_DIR
 
 ## Funding
 This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (grant number XDB38040100) and the National Natural Science Foundation of China [grant numbers 92259101 and 31771466].
