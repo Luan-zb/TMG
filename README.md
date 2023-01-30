@@ -42,10 +42,10 @@ Brain|447
 - pyyaml (3.13)
 
 ## Training
-
+python main_mtl_concat_all_type_transformer.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mtl_sex  --task dummy_mtl_concat  --log_data  --results_dir result_TransMIL_test38 --data_root_dir DATA_ROOT_DIR
 
 ## Evaluation
-
+python eval_mtl_concat_all_type_transformer.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir DATA_ROOT_DIR
 
 ## Funding
 This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (grant number XDB38040100) and the National Natural Science Foundation of China [grant numbers 92259101 and 31771466].
