@@ -1,6 +1,3 @@
-
-#CUDA_VISIBLE_DEVICES=0 python main_mtl_concat_all_type.py --drop_out --early_stopping --lr 2e-4 --k 1 --exp_code dummy_mtl_sex  --task dummy_mtl_concat  --log_data  --data_root_dir /home/daichuangchuang/Nature/CLAM/DATA_ROOT_DIR
-#把python新版本中print_function函数的特性导入到当前版本。如，在python2环境下，使用此句，则可以超前使用python3的print函数了。
 from __future__ import print_function
 import argparse
 import pdb
