@@ -13,15 +13,14 @@ Various types of data are as follows:
 
 Types|Quantity
 :---:|:---:
-ADI|10407
-BACK|10566
-DEB|11512
-LYM|11557
-MUC|8896
-MUS|13536
-NORM|8763
-STR|10446
-TUM|14317
+Lung|2162
+Skin|388
+Kidney|735
+Uterus Endometrium|334
+Pancreas|469
+Soft tissue|294
+Head Neck|816
+Brain|447
 
 ## Environment
 - Python (3.7.7)
