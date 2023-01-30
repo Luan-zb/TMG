@@ -55,11 +55,11 @@ optional arguments:
 
 ## Evaluation
 python eval.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir DATA_ROOT_DIR
-optional arguments:
-  -h, --help            show this help message and exit
-  --drop_out            whether model uses dropout
-  --k K                 number of folds (default: 1)
-  --models_exp_code MODELS_EXP_CODE
+- optional arguments:
+-   -h, --help            show this help message and exit
+-   --drop_out            whether model uses dropout
+-   --k K                 number of folds (default: 1)
+-   --models_exp_code MODELS_EXP_CODE
                         experiment code to load trained models (directory
                         under results_dir containing model checkpoints
    --save_exp_code SAVE_EXP_CODE
