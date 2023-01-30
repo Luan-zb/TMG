@@ -60,21 +60,24 @@ python train.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mt
 ## Evaluation
 python eval.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir DATA_ROOT_DIR
 ### optional arguments:
--   -h, --help show this help message and exit
--   --drop_out            whether model uses dropout
--   --k K                 number of folds (default: 1)
--   --models_exp_code MODELS_EXP_CODE
+ ```                    
+   -h, --help show this help message and exit
+   --drop_out            whether model uses dropout
+   --k K                 number of folds (default: 1)
+   --models_exp_code MODELS_EXP_CODE
                         experiment code to load trained models (directory
                         under results_dir containing model checkpoints
--   --save_exp_code SAVE_EXP_CODE
+   --save_exp_code SAVE_EXP_CODE
                         experiment code to save eval results
--   --task {study_v2_mtl_sex}      
--   --results_dir RESULTS_DIR
+   --task {study_v2_mtl_sex}      
+   --results_dir RESULTS_DIR
                         relative path to results folder, i.e. the directory
                         containing models_exp_code relative to project root
                         (default: ./results)
--  --data_root_dir DATA_ROOT_DIR
+   --data_root_dir DATA_ROOT_DIR
                         data directory
+```
+
 
 ## Funding
 This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (grant number XDB38040100) and the National Natural Science Foundation of China [grant numbers 92259101 and 31771466].
