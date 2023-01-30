@@ -100,7 +100,7 @@ parser.add_argument('--opt', type=str, choices=['adam', 'sgd','adamax','agsd','A
 parser.add_argument('--drop_out', action='store_true', default=False, help='enabel dropout (p=0.25)')
 parser.add_argument('--exp_code', type=str, help='experiment code for saving results')
 parser.add_argument('--weighted_sample', action='store_true', default=False, help='enable weighted sampling')
-parser.add_argument('--task', type=str, choices=['dummy_mtl_concat'])
+parser.add_argument('--task', type=str, choices=['mil_concat_transformer'])
 args = parser.parse_args()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -151,7 +151,7 @@ settings = {'num_splits': args.k,
 			patient_voting (string): Rule for deciding the patient-level label
 '''
 
-if args.task == 'dummy_mtl_concat':
+if args.task == 'mil_concat_transformer':
      args.n_classes = 8
      '''
         pt file:  features, label, site, sex 
