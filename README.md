@@ -40,10 +40,14 @@ Brain|447
 python train.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mtl_sex  --task dummy_mtl_concat  --log_data  --results_dir results --data_root_dir DATA_ROOT_DIR
 
 ### optional arguments:
-　-h, --help　　　　　　　show this help message and exit　　
+　-h, --help　　　　　　　show this help message and exit　
+ 
   --drop_out　　　　　　　enabel dropout (p=0.25)　　
+  
   --early_stopping　　　　enable early stopping　　
+  
   --k K　　　　　　　　　　number of folds (default: 10)<br>  
+  
 -  --exp_code EXP_CODE   experiment code for saving results<br>  
 -  --task {dummy_mtl_concat}
 -  --log_data            log data using tensorboard
