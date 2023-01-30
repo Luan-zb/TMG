@@ -1,4 +1,3 @@
-#CUDA_VISIBLE_DEVICES=0 python eval_mtl_concat_all_type.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir /home/daichuangchuang/Nature/CLAM/DATA_ROOT_DIR
 from __future__ import print_function
 import numpy as np
 import argparse
