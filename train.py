@@ -94,11 +94,8 @@ parser.add_argument('--results_dir', default='./results', help='results director
 parser.add_argument('--split_dir', type=str, default=None,
                     help='manually specify the set of splits to use, '
                          + 'instead of infering from the task and label_frac argument (default: None)')
-'''
-parser.add_argument('--sparse', action='store_true', default=False, help='GAT with sparse version or not.')
-直接运行python test.py，输出结果sparse->False
-运行python test.py --sparse，输出结果sparse->True
-'''
+
+
 parser.add_argument('--log_data', action='store_true', default=False, help='log data using tensorboard')
 parser.add_argument('--testing', action='store_true', default=False, help='debugging tool')
 parser.add_argument('--early_stopping', action='store_true', default=False, help='enable early stopping')
@@ -120,8 +117,6 @@ def seed_torch(seed=7):
     if device.type == 'cuda':
         torch.cuda.manual_seed(seed)  # GPU
         torch.cuda.manual_seed_all(seed)  # if you are using multi-GPU.
-    # flag 为 True，我们就可以在 PyTorch 中对模型里的卷积层进行预先的优化，也就是在每一个卷积层中测试 cuDNN 提供的所有卷积实现算法，然后选择最快的那个。
-    # 只需额外花费一些预处理的时间，就可大幅减少训练时间
     torch.backends.cudnn.benchmark = False
     # flag 置为True的话，每次返回的卷积算法将是确定的，即默认算法
     torch.backends.cudnn.deterministic = True
@@ -144,8 +139,7 @@ settings = {'num_splits': args.k,
             'weighted_sample': args.weighted_sample,
             'opt': args.opt}
 
-# {'num_splits': 1, 'k_start': -1, 'k_end': -1, 'task': 'dummy_mtl_concat', 'max_epochs': 200, 'results_dir': './results', 'lr': 0.0002, 'experiment': 'dummy_mtl_sex', 'reg': 1e-05, 'seed': 1, 'use_drop_out': True, 'weighted_sample': False, 'opt': 'adam', 'split_dir': 'splits_LSCC_CM_Augmentation/dummy_mtl_concat_100'}
-print('\nLoad Dataset')
+
 
 '''
 		Args:
