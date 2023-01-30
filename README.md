@@ -1,5 +1,7 @@
 # TN-MIL-GAP
 Cancers of unknown primary (CUPs) are metastatic tumours whose primary site cannot be determined; that is, when malignant cells are discovered in the body, but the primary site of the tumour cannot be determined. Identifying the origin of a tumour is the premise and prerequisite for effective treatment in the current cancer diagnostic and treatment systems, which considerably increases the difficulty of diagnosing and treating patients with CUPs whose primary site cannot be found. The traditional methods used to identify the origin of a tumour often include clinical, radiological, and endoscopic examinations. However, these detection methods are not satisfactorily accurate, sensitive, and specific, and do not provide a diagnostic gold standard. To overcome these challenges, we present a Transformer-based algorithm (TN-MIL-GAP) that can predict the origin of primary tumours. We used whole-slide images of tumours with known primary origins to train a model that could identify the origin sites of the primary tumour. In our dependent test set with known primary origins, the model achieved an AUC of 99.66% and a top-1 accuracy of 94.8%, which is a great improvement compared to other state-of-the-art methods, such as AttentionMIL, TOAD, and MIL.
+
+![Image text](https://github.com/Luan-zb/TN-MIL-GAP/releases/tag/CHART/Figure1.tif)
 ## Data
 The pathology slides and corresponding labels for WSIs are available from the TCIA CPTAC Pathology Portal（https://cancerimagingarchive.net/datascope/cptac/）.
 Various types of data are as follows:
