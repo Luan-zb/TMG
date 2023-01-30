@@ -40,27 +40,48 @@ Brain|447
 python train.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mtl_sex  --task dummy_mtl_concat  --log_data  --results_dir results --data_root_dir DATA_ROOT_DIR
 
 ### optional arguments:
-　-h, --help　　　　　　　show this help message and exit　
  
-  --drop_out　　　　　　　enabel dropout (p=0.25)　　
+ ```
+   --bam, -b        Input bamfile (either this or fastq1+2 required)
+   --typeb, -t      Reads to extract from input bam (defaults to "targeted" [FLT3-aligned]; or can be "loose" or "all")
+   --fastq1, -f1    Input fastq1 (either fastq1+2 or bam required)
+   --fastq2, -f2    Input fastq2 (either fastq1+2 or bam required)
+   --output, -o     Output path (required)
+   --ngstype, -n    NGS platform type (defaults to "HC" [hybrid capture]; or can be "amplicon", "NEB", or "Archer")
+   --genome, -g     Genome build (defaults to "hg19"; or can be "hg38")
+   --adapter, -a    Trim adapters (defaults to true; assumes illumina)
+   --web, -w        Create html webpages for each ITD call (defaults to false)
+   --umitag, -u     BAM tag holding UMIs in the input bamfile for fgbio (defaults to ""; standard is "RX")
+   --strat, -s      Strategy for UMI assignment used in fgbio GroupReadsByUmi (defaults to "adjacency" )
+   --probes, -p     Probes/baits file basename (defaults to ""); assumes fasta file, bwa indexfiles
+   --minreads, -mr  Minimum number of supporting reads to be included in VCF (umi-based if umitag set)
+   --debug, -d      Save all intermediate files (defaults to false)
+   --help, -h       Print this help
+   
+   
+   -h, --help　　　　　　　show this help message and exit　
+ 
+   --drop_out　　　　　　　enabel dropout (p=0.25)　　
   
-  --early_stopping　　　　enable early stopping　　
+   --early_stopping　　　　enable early stopping　　
   
-  --k K　　　　　　　　　　number of folds (default: 10)<br>  
+   --k K　　　　　　　　　　number of folds (default: 10)<br>  
   
--  --exp_code EXP_CODE   experiment code for saving results<br>  
--  --task {dummy_mtl_concat}
--  --log_data            log data using tensorboard
--  --results_dir RESULTS_DIR
+   --exp_code EXP_CODE   experiment code for saving results<br>  
+   --task {dummy_mtl_concat}
+   --log_data            log data using tensorboard
+   --results_dir RESULTS_DIR
                         results directory (default: ./results)
--  --data_root_dir DATA_ROOT_DIR
-                        data directory                   
+   --data_root_dir DATA_ROOT_DIR
+                        data directory    
+```
+
 
 
 ## Evaluation
 python eval.py --drop_out --k 1 --models_exp_code dummy_mtl_sex_s1 --save_exp_code dummy_mtl_sex_s1_eval --task study_v2_mtl_sex  --results_dir results --data_root_dir DATA_ROOT_DIR
 ### optional arguments:
--   -h, --help            show this help message and exit
+-   -h, --help show this help message and exit
 -   --drop_out            whether model uses dropout
 -   --k K                 number of folds (default: 1)
 -   --models_exp_code MODELS_EXP_CODE
