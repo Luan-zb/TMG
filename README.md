@@ -34,7 +34,17 @@ Brain|447
 - scipy (1.4.1)
 - tensorflow (1.14.0)
 - tensorboardx (1.14.0)
-- torchvision (0.1.8).
+- torchvision (0.1.8)
+- performer_pytorch (1.1.4)
+- einops (0.4.1)
+- spams (2.6.1)
+- staintools (2.1.2)
+- pyyaml (3.13)
+
+## Training
+
+
+## Evaluation
 
 
 ## Funding
