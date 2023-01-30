@@ -41,6 +41,7 @@ python train.py --drop_out --early_stopping --lr  2e-4 --k 1 --exp_code dummy_mt
 
 ### optional arguments:
    -h, --help            show this help message and exit
+   
 -  --drop_out            enabel dropout (p=0.25)
 -  --early_stopping      enable early stopping
 -  --k K                 number of folds (default: 10)
