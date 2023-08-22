@@ -80,7 +80,4 @@ python eval.py --drop_out --k 1 --models_exp_code mil_concat_transformer_s1 --sa
 ```
 
 
-## Funding
-This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (grant number XDB38040100) and the National Natural Science Foundation of China [grant numbers 92259101 and 31771466].
-
 
