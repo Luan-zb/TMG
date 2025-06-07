@@ -83,3 +83,8 @@ python eval.py --drop_out --k 1 --models_exp_code mil_concat_transformer_s1 --sa
 
 
 
+If you have any questions, please contact Rui Yan at luanhaijing@cnic.cn.
+
+If you find our work useful in your research, please consider citing our paper at:
+Luan H, Hu T, Hu J, et al. Multi-class cancer classification of whole slide images through transformer and multiple instance learning[C]//International Symposium on Bioinformatics Research and Applications. Singapore: Springer Nature Singapore, 2023: 150-164.
+
